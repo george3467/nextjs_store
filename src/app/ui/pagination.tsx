@@ -17,7 +17,7 @@ export default function Pagination({
   const totalPages = Math.ceil(totalItems / itemsPerPage);
   if (totalPages <= 1) return null;
 
-  // If only one page, no need to show pagination
+  // Handle going to the previous page
   const handlePrev = () => {
     if (currentPage > 1) onPageChange(currentPage - 1);
   };
